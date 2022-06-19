@@ -44,6 +44,7 @@ function sednMessage(sendMsg, orderID, paymentID) {
         if (orderID != null && orderID != "" && paymentID != null && paymentID != ""
             && sendToWho != null && sendToWho != "") {
             sendMsg = `${sendMsg}#${orderID}#${paymentID}#${sendToWho}`;
+            console.log(sendMsg);
             websocket.send(sendMsg);
         }
     });
