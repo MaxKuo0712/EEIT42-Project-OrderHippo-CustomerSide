@@ -18,6 +18,7 @@ function connWebSocket(userInfo) {
 }
 
 function closeWebSocket() {
+  console.log("WebSocket斷線");
   websocket.close();
 }
 
