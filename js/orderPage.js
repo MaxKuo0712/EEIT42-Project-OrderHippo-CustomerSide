@@ -287,7 +287,9 @@ function orderDetail(orderStatus) {
 //日期顯示
 function formatDate(newDate) {
   let date = new Date(newDate);
-  return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
+  // return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
+  return date.getFullYear() + "年" + (date.getMonth() + 1) + "月" +
+    date.getDate() + "日" + date.getHours() + "時" + date.getMinutes() + "分";
 }
 //訂單編號太長縮寫
 function limitWords(txt) {
