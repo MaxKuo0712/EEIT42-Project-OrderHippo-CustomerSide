@@ -143,7 +143,7 @@ function addBellInfo(msg, orderID, paymentID, color) {
       </button>
     </li>`
     );
-    // ${msg}：<br> ${orderID}, <br> ${paymentID}
+    // ${msg}
 }
 /**------------------------------------------------------------------------------- */
 // let userID = 'iGImodKQRvQU1dYUfPfyM4HBD6r2';
