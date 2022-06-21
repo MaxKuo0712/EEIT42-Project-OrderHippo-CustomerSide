@@ -231,14 +231,14 @@ function load(index) {
   for (var order of index) {
     $('#orderCa').append(
       '<div class="row d-flex align-content-around flex-wrap text-center">' +
-      `<div class="col-2">${formatDate(order.createtime)}</div>` +
+      `<div class="col-3">${formatDate(order.createtime)}</div>` +
       '<div class="col-2 ">' +
       `<p>${order.mealorderqty}</p>` +
       '</div>' +
       '<div class="col-2">' +
       `<span>${order.ordersprice}</span>` +
       '</div>' +
-      '<div class="col-3">' +
+      '<div class="col-2">' +
       `<span>${limitWords(order.orderid)}</span>` +
       '</div>' +
       '<div class="col-3">' +
