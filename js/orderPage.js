@@ -215,7 +215,7 @@ function addBellInfo(msg, orderID, paymentID, color) {
     <button class="bellDropdown dropdown-item" type="button" 
       style="background-color: ${color}; font-size: 12px; overflow:hidden;
       white-space: nowrap; text-overflow: ellipsis;">
-      ${msg}：<br> ${orderID}, <br> ${paymentID}
+      ${msg}
     </button>
   </li>`
   );
@@ -231,7 +231,7 @@ function load(index) {
   for (var order of index) {
     $('#orderCa').append(
       '<div class="row d-flex align-content-around flex-wrap text-center">' +
-      `<div class="col-2">${limitWords(order.orderid)}</div>` +
+      `<div class="col-2">${formatDate(order.createtime)}</div>` +
       '<div class="col-2 ">' +
       `<p>${order.mealorderqty}</p>` +
       '</div>' +
@@ -239,7 +239,7 @@ function load(index) {
       `<span>${order.ordersprice}</span>` +
       '</div>' +
       '<div class="col-3">' +
-      `<span>${formatDate(order.createtime)}</span>` +
+      `<span>${limitWords(order.orderid)}</span>` +
       '</div>' +
       '<div class="col-3">' +
       `<span>${order.orderstatusname}</span>` +
@@ -287,12 +287,12 @@ function orderDetail(orderStatus) {
 //日期顯示
 function formatDate(newDate) {
   let date = new Date(newDate);
-  return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+  return date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes();
 }
 //訂單編號太長縮寫
 function limitWords(txt) {
   var str = txt;
-  str = str.substr(10, 5) + '...';
+  str = str.substr(15, 10) + '...';
   return str;
 }
 

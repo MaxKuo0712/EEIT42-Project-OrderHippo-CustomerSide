@@ -310,7 +310,12 @@ $(".discount").on("click", () => {
         );
         $(".discount").attr("disabled", true);
       }).catch((err) => {
-        alert("沒有這個優惠碼,請重新輸入");
+        Swal.fire({
+          icon: 'warning',
+          title: "沒有這個優惠券，請重新輸入！",
+          showConfirmButton: false,
+          timer: 1500
+        });
       });
   }
 })

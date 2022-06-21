@@ -139,10 +139,11 @@ function addBellInfo(msg, orderID, paymentID, color) {
       <button class="bellDropdown dropdown-item" type="button" 
         style="background-color: ${color}; font-size: 12px; overflow:hidden;
         white-space: nowrap; text-overflow: ellipsis;">
-        ${msg}：<br> ${orderID}, <br> ${paymentID}
+        ${msg}
       </button>
     </li>`
     );
+    // ${msg}：<br> ${orderID}, <br> ${paymentID}
 }
 /**------------------------------------------------------------------------------- */
 // let userID = 'iGImodKQRvQU1dYUfPfyM4HBD6r2';
